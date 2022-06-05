@@ -14,7 +14,9 @@ const tea = {
     }
 }
 
-app.use(cors)
+app.use(cors({
+    origin: "*"
+}))
 
 app.get('/', (request,response) => {
     response.sendFile(__dirname + '/index.html')
